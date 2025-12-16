@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "orbital-relations"
+version = "0.1.0"
+description = "Closed-form orbital mechanics relations with a simple numerical root-finding utility"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/orbital_relations"]
