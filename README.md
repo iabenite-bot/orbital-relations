@@ -26,9 +26,8 @@ from orbital_relations import (
     solve_radius_for_circular_velocity,
 )
 
-# Earth gravitational parameter (SI units)
 mu_earth = 3.986004418e14  # m^3/s^2
-r = 6.371e6 + 400e3        # m (LEO altitude)
+r = 6.371e6 + 400e3        # m
 
 v_c = circular_velocity(mu_earth, r)
 v_e = escape_velocity(mu_earth, r)
@@ -42,7 +41,12 @@ r_num, info = solve_radius_for_circular_velocity(
     r_max=8.0e6,
 )
 
-print(v_c, v_e, T, eps, r_num)
+print("Circular velocity [m/s]:", v_c)
+print("Escape velocity  [m/s]:", v_e)
+print("Orbital period   [s]:", T)
+print("Specific energy  [J/kg]:", eps)
+print("Recovered radius [m]:", r_num)
+print("Iterations:", info["iterations"])
 ```
 ## Documentation
 
